@@ -9,6 +9,7 @@ Iterative protocol for the analysis of repetitive elements in non model organism
   * seqTK [https://github.com/lh3/seqtk](https://github.com/lh3/seqtk)
   * DeconSeq [http://deconseq.sourceforge.net](http://deconseq.sourceforge.net)
   * Trimmomatic [http://www.usadellab.org/cms/?page=trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)
+  * dnaPipeTE [https://github.com/clemgoub/dnaPipeTE](https://github.com/clemgoub/dnaPipeTE)
 
 ## 1. Repetitive elements mining (from the satMiner pipeline [https://github.com/fjruizruano/satminer](https://github.com/fjruizruano/satminer))
 
@@ -68,23 +69,26 @@ $ rexp_annot.py RexpFastaFile AnnotationFile [Unknown]
 ```
 
 
-### XX. Run dnaPipeTE
+## 2. Launch dnaPipeTE and annotate contigs
+
+Launch dnaPipeTE:
 
 ```
 $ python3 /directory/to/dnaPipeTE.py -input directory/to/reads_1.fastq -output /output/directory/ -cpu 12 -sample_number 2 -sample_size 500000 -RM_lib /directory/to/database.fasta -Trin_glue 10 -contig_length 300
 ```
+Remove "Low_complexity", "Simple_repeat" and "Unknown" annotations:
 
 ```
-$ cd /directory/to/dnapipete/Annotation/
-$ grep -v "Low_complexity" one_RM_hit_per_Trinity_contigs | grep -v "Simple_repeat" | grep -v "Unknown" > one_RM_hit_per_Trinity_contigs_dante3_comp
+$ cd /directory/to/dnapipete/run/Annotation/
+$ grep -v "Low_complexity" one_RM_hit_per_Trinity_contigs | grep -v "Simple_repeat" | grep -v "Unknown" > one_RM_hit_per_Trinity_contigs_mod
 ```
-
-
-```
-$ dnapipete_createdb.py ../Trinity.fasta one_RM_hit_per_Trinity_contigs_dante3_comp
+Annotate contigs:
 
 ```
-### XX. Abundance and divergece
+$ dnapipete_createdb.py ../Trinity.fasta one_RM_hit_per_Trinity_contigs_mod
+
+```
+## 3. Abundance and divergece
 
 ```
 $ repeat_masker_run_big.py ListOfFastaFiles FastaReference NumberOfThreads
