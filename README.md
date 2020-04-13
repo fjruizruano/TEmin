@@ -10,7 +10,7 @@ Iterative protocol for the analysis of repetitive elements in non model organism
   * DeconSeq [http://deconseq.sourceforge.net](http://deconseq.sourceforge.net)
   * Trimmomatic [http://www.usadellab.org/cms/?page=trimmomatic](http://www.usadellab.org/cms/?page=trimmomatic)
 
-## 1. Repetitive elements mining (from the satMiner pipeline [https://github.com/fjruizruano/satminer]https://github.com/fjruizruano/satminer)
+## 1. Repetitive elements mining (from the satMiner pipeline [https://github.com/fjruizruano/satminer](https://github.com/fjruizruano/satminer))
 
 ### 1a. Preparing sequences to RepeatExplorer
 
