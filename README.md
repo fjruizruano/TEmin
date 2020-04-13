@@ -93,3 +93,9 @@ $ dnapipete_createdb.py ../Trinity.fasta one_RM_hit_per_Trinity_contigs_mod
 ```
 $ repeat_masker_run_big.py ListOfFastaFiles FastaReference NumberOfThreads
 ```
+
+To test purposes:
+
+```
+$ divsum_join_annot.py RepeatLandscapeFile AnnotationFile
+```
