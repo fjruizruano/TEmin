@@ -1,2 +1,2 @@
 # repeatMiner
-Iterative protocol for the analysis of repetitive elements in non model organism
+Iterative protocol for the analysis of repetitive elements in non model organisms
