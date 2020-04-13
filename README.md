@@ -90,7 +90,9 @@ Annotate contigs:
 $ dnapipete_createdb.py ../Trinity.fasta one_RM_hit_per_Trinity_contigs_mod
 
 ```
-## 3. Abundance and divergece
+## 3. Abundance and divergence
+
+Generate repeat landscapes in a selection of reads in FASTA format:
 
 ```
 $ repeat_masker_run_big.py ListOfFastaFiles FastaReference NumberOfThreads
