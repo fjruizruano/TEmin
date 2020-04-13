@@ -51,7 +51,7 @@ $ rexp_prepare_deconseq.py NumberOfPairedReads LibraryA_clean_1.fastq LibraryA_c
 ```
 You will then get a FASTA file to run again RepeatExplorer, so continue with step 1b.
 
-### XX. Annotate RepeatExplorer contigs
+### 1f. Annotate RepeatExplorer contigs
 
 Annotation file:
 ```
@@ -63,6 +63,8 @@ CL5	LTR/Gypsy-TatRetand
 CL6
 CL7	LTR/Gypsy-Tat
 ```
+
+Transfer annotation from annotation file to RepeateExplorer Contigs
 
 ```
 $ rexp_annot.py RexpFastaFile AnnotationFile [Unknown]
