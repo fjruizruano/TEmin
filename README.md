@@ -17,7 +17,7 @@ Iterative protocol for the analysis of repetitive elements in non model organism
 There is not a number of paired reads to start. You can try with 100000 or 200000. You should also indicate the minimum quality and the minimum length. For example if you are using Illumina PE 2x100 reads, you can try 20 and 100, respectively.
 
 ```
-$ rexp_prepare.py NumberOfPairedReads LibraryA_1.fastq LibraryA_2.fastq MinQual MinLen
+$ rexp_prepare_normaltag.py NumberOfPairedReads LibraryA_1.fastq LibraryA_2.fastq MinQual MinLen
 ```
 
 ### 1b. Run RepeatExplorer
@@ -53,17 +53,17 @@ You will then get a FASTA file to run again RepeatExplorer, so continue with ste
 ### XX. Run dnaPipeTE
 
 ```
-python3 /directory/to/dnaPipeTE.py -input directory/to/reads_1.fastq -output /output/directory/ -cpu 12 -sample_number 2 -sample_size 500000 -RM_lib /directory/to/database.fasta -Trin_glue 10 -contig_length 300
+$ python3 /directory/to/dnaPipeTE.py -input directory/to/reads_1.fastq -output /output/directory/ -cpu 12 -sample_number 2 -sample_size 500000 -RM_lib /directory/to/database.fasta -Trin_glue 10 -contig_length 300
 ```
 
 ```
-cd /directory/to/dnapipete/Annotation/
-grep -v "Low_complexity" one_RM_hit_per_Trinity_contigs | grep -v "Simple_repeat" | grep -v "Unknown" > one_RM_hit_per_Trinity_contigs_dante3_comp
+$ cd /directory/to/dnapipete/Annotation/
+$ grep -v "Low_complexity" one_RM_hit_per_Trinity_contigs | grep -v "Simple_repeat" | grep -v "Unknown" > one_RM_hit_per_Trinity_contigs_dante3_comp
 ```
 
 
 ```
-dnapipete_createdb.py ../Trinity.fasta one_RM_hit_per_Trinity_contigs_dante3_comp
+$ dnapipete_createdb.py ../Trinity.fasta one_RM_hit_per_Trinity_contigs_dante3_comp
 
 ```
 ### XX. Abundance and divergece
