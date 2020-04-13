@@ -50,6 +50,24 @@ $ rexp_prepare_deconseq.py NumberOfPairedReads LibraryA_clean_1.fastq LibraryA_c
 ```
 You will then get a FASTA file to run again RepeatExplorer, so continue with step 1b.
 
+### XX. Annotate RepeatExplorer contigs
+
+Annotation file:
+```
+CL1	DNA/hAT
+CL2	DNA/Sola1
+CL3	LTR/Copia-SIRE
+CL4	LINE
+CL5	LTR/Gypsy-TatRetand
+CL6
+CL7	LTR/Gypsy-Tat
+```
+
+```
+$ rexp_annot.py RexpFastaFile AnnotationFile [Unknown]
+```
+
+
 ### XX. Run dnaPipeTE
 
 ```
