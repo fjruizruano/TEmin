@@ -1,4 +1,4 @@
-# repeatMiner
+# TEmin
 Iterative protocol for the analysis of repetitive elements in non model organisms
 
 ## Installation
